@@ -1,12 +1,12 @@
 # NDBI044
 
-##Bioinformatics toolbox
+## Bioinformatics toolbox
 
 This package implements some basic bioinformatic tools for simple tasks.
 
-###Installation
+### Installation
 
-####For installation using python virtual environment follow the following script:
+#### For installation using python virtual environment follow the following script:
 ```console
 $ git clone https://github.com/Ardashir52/NDBI044.git
 $ cd python_version
@@ -15,16 +15,16 @@ $ source venv/bin/activate
 $ python3 setup.py install
 ```
 
-####For a global install follow just these steps:
+#### For a global install follow just these steps:
 ```console
 $ git clone https://github.com/Ardashir52/NDBI044.git
 $ cd python_version
 $ python3 setup.py install
 ``` 
 
-##Library functionality
+## Library functionality
 
-###Edit distance
+### Edit distance
 
 This function allows to compute the edit distance of two sequences and to retreive
 all of the corresponding alignments.
@@ -38,7 +38,7 @@ Example:
 3, [('S––unday', 'Saturday'), ('S–u–nday', 'Saturday'), ('Su––nday', 'Saturday')]
 ```
 
-###Hamming distance
+### Hamming distance
 
 This function computes the Hamming distance of two sequences of same length.
 
@@ -51,7 +51,7 @@ Example:
 3
 ```
 
-###Fasta processing
+### Fasta processing
 
 The function implemented in bioinfobox.fasta allow for parsing and retreiving
 simple information about sequences in the fasta format.
@@ -84,7 +84,7 @@ MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
 MADQL
 ```
 
-###Multiple sequence alignment
+### Multiple sequence alignment
 
 Functions implemented in bioinfobox.msa allow user to parse files 
 in the CLUSTAL format, retrieve sequences or columns in the MSA, 
@@ -141,7 +141,7 @@ Scoring examples:
 83756.0
 ```
 
-###Determinig conservation
+### Determinig conservation
 
 The functions in bioinfobox.conservation serve to compute the conservation score
 of column or finding the n most conserved positions.
@@ -164,7 +164,7 @@ Examples:
 [(210, 1.0), (211, 1.0), (214, 1.0), (216, 1.0), (219, 1.0)]
 ```
 
-###Parsing PDB files
+### Parsing PDB files
 
 The functions in bioinfobox.pdb allow the user to parse a PDB format file and to
 retrieve some infomations about the structures.
@@ -212,7 +212,7 @@ Examples:
 [<Atom O>, <Atom OH>, <Atom CE2>, <Atom CD2>, <Atom CZ>, <Atom CE1>]
 ```
 
-###Structure and sequence correspondence
+### Structure and sequence correspondence
 
 Lastly, the function contained in bioinfobox.str_seq allows to analyze the relative
 conservation of active site in a structure.
@@ -236,13 +236,13 @@ the compromise the result that shows that the active site is indeed significantl
 the totality of the structure.*
 
 
-##Console functionality
+## Console functionality
 
 This library has also a command line interface, albeit somewhat limited, as I found the biopython
 atom format quite impractical to use in this way and so the str_seq and majority of pdb libraries
 are not implemented. The rest works as follows:
 
-###Edit distance:
+### Edit distance:
 
 Usage:
 
@@ -266,7 +266,7 @@ Su––nday
 Saturday
 ```
 
-###Hamming distance:
+### Hamming distance:
 
 Usage:
 
@@ -281,7 +281,7 @@ $ bioinfobox hamming Slavia Sparta
 The Hamming distance of the sequences is: 3
 ```
 
-###Fasta processing:
+### Fasta processing:
 
 Usage:
 
@@ -311,7 +311,7 @@ $ bioinfobox msa python_version/test/p53_mafft_clustal.txt --score BLOSUM62
 83756.0
 ```
 
-###Conservation:
+### Conservation:
 
 Usage:
 
@@ -326,7 +326,7 @@ $ bioinfobox conservation python_version/test/p53_mafft_clustal.txt --best 5
 [(210, 1.0), (211, 1.0), (214, 1.0), (216, 1.0), (219, 1.0)]
 ```
 
-###Parsing PDB files:
+### Parsing PDB files:
 
 Due to the low suitability of the biopython Atom format, only the width computation
 is implemented.
@@ -343,7 +343,7 @@ Example:
 $ bioinfobox pdb python_version/test/pdb1lb5.ent.txt
 The width of the structure is: 53.48979
 ```
-###Matrices:
+### Matrices:
 
 For the MSA portion it might be useful to know the list of available matrices, which
 is what this command provides.
