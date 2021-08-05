@@ -57,7 +57,7 @@ def frontend():
     # parser_pdb.add_argument('--chains', action='store_true')
     # parser_pdb.add_argument('--residues', action='store_true')
     # parser_pdb.add_argument('--atoms', action='store_true')
-    parser_pdb.add_argument('--width', action='store_true')
+    # parser_pdb.add_argument('--width', action='store_true')
     # parser_pdb.add_argument('--neigh_atom', dest='neigh_atom', nargs=6)
     # parser_pdb.add_argument('--neigh_res', dest='neigh_res', nargs=6)
 
@@ -89,7 +89,7 @@ def frontend():
                     print(el[0])
                     print(el[1])
         elif choices.action == 'hamming':
-            print("The hamming distance of the sequences is: " + str(hamming(choices.seq1, choices.seq2)))
+            print("The Hamming distance of the sequences is: " + str(hamming(choices.seq1, choices.seq2)))
         elif choices.action == 'fasta':
             fasta_dict = load_fasta(choices.path)
             if choices.desc is not None:
@@ -128,9 +128,8 @@ def frontend():
                 print(n_cons)
         elif choices.action == 'pdb':
             pdb_structure = load_pdb(path=choices.path, name='str1')
-            if choices.width:
-                width = pdb_width(pdb_structure)
-                print("The width of the structure is: " + str(width))
+            width = pdb_width(pdb_structure)
+            print("The width of the structure is: " + str(width))
         elif choices.action == 'matrices':
             matrix_offer()
 

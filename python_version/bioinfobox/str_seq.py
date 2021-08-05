@@ -1,7 +1,7 @@
 from statistics import mean
 from Bio.PDB import Atom, Structure
-from .pdb import pdb_get_neighbor_atoms
-from .conservation import conservation_at_position
+from bioinfobox.pdb import pdb_get_neighbor_atoms
+from bioinfobox.conservation import conservation_at_position
 
 
 def structure_sequence_equivalence(hetatm: Atom.Atom, clustal_msa: list,
