@@ -141,7 +141,7 @@ Scoring examples:
 83756.0
 ```
 
-### Determinig conservation
+### Determining conservation
 
 The functions in bioinfobox.conservation serve to compute the conservation score
 of column or finding the n most conserved positions.
@@ -230,7 +230,8 @@ Example:
 0.8363095238095238 0.5388140161725068
 ```
 
-*In testing this feature I only had access to partial sequence, to which I redsponded by padding the sequence
+
+*In testing this feature I only had access to partial sequence, to which I responded by padding the sequence
 in the MSA, which may in turn slightly lower the average conservation score, but, I believe, not enough
 the compromise the result that shows that the active site is indeed significantly more conserved than
 the totality of the structure.*
