@@ -297,7 +297,7 @@ $ bioinfobox fasta python_version/test/fastaseqtest --description MCHU
 MCHU - Calmodulin - Human, rabbit, bovine, rat, and chicken
 ```
 
-###Multiple sequence alignment:
+### Multiple sequence alignment:
 
 Usage:
 
